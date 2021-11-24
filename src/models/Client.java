@@ -46,6 +46,30 @@ public class Client implements Payment, Discount, Sales {
         this.price = price;
     }
 
+    public int getSoldAmount() {
+        return soldAmount;
+    }
+
+    public void setSoldAmount(int soldAmount) {
+        this.soldAmount = soldAmount;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public double getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(double taxRate) {
+        this.taxRate = taxRate;
+    }
+
     // Расчёт платежа, без учета скидки.
     @Override
     public double calculatePayment(int quota, double price) {
