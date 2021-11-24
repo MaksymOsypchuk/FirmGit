@@ -2,7 +2,7 @@ package base;
 
 public interface Sales {
 
-    double calculateSales(int quota, double price);
+    double calculateSales(int unitsAmount, double price);
 
-    double calculateSalesTaxes(double payment, double discount);
+    double calculateSalesTaxes(double salesAmount, double taxRate);
 }
