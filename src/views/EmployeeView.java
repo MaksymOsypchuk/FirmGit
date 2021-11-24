@@ -16,4 +16,9 @@ public class EmployeeView {
     public EmployeeView(Employee model){
         this.model = model;
     }
+
+    public void getInputs(){
+
+
+    }
 }
