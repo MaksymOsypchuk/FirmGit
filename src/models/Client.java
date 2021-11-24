@@ -19,6 +19,10 @@ public class Client implements Payment, Discount, Salary, Sales {
     private double taxAmount;
     private final static int DISCOUNT_RATE = 15;
 
+    //переменные для расчета заработной платы
+    private double hourlyRate;
+    private double totalHours;
+
     public Client() {
     }
 
@@ -64,13 +68,20 @@ public class Client implements Payment, Discount, Salary, Sales {
         return payment * DISCOUNT_RATE / 100;
     }
 
+    // Расчет суммы продаж
     @Override
     public double calculateSales(int soldAmount, double unitPrice) {
         return soldAmount * unitPrice;
     }
 
+    //Расчет суммы налога
     @Override
     public double calculateSalesTaxes(double salesAmount, double taxRate) {
         return salesAmount * taxRate;
+    }
+
+    @Override
+    public double calculateSalary(double hourlyRate, double totalHours) {
+        return hourlyRate * totalHours;
     }
 }
