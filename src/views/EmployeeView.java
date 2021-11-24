@@ -19,6 +19,13 @@ public class EmployeeView {
 
     public void getInputs(){
 
+        // Создаем экземпляр Scanner
+        scanner = new Scanner(System.in);
 
+        // Ввод данных (НЕ ЗАБЫТЬ ДОБАВИТЬ ВАЛИДАЦИЮ!)
+
+        title = "Введите часовую ставку работника: ";
+        System.out.print(title);
+        model.setHourlyRate(hourlyRate);
     }
 }
