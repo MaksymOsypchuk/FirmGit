@@ -2,15 +2,25 @@ package models;
 
 import base.Discount;
 import base.Payment;
+import base.Salary;
+import base.Sales;
 
 // Model.
 // Применение интерфейсов.
-public class Client implements Payment, Discount {
+public class Client implements Payment, Discount, Salary, Sales {
 
     private String name;
     private int quantity;
     private double price;
+    private int soldAmount;
+    private double unitPrice;
+    private double salesAmount;
+    private double taxRate;
+    private double taxAmount;
     private final static int DISCOUNT_RATE = 15;
+
+    public Client() {
+    }
 
     public String getName() {
         return name;
@@ -54,4 +64,13 @@ public class Client implements Payment, Discount {
         return payment * DISCOUNT_RATE / 100;
     }
 
+    @Override
+    public double calculateSales(int soldAmount, double unitPrice) {
+        return soldAmount * unitPrice;
+    }
+
+    @Override
+    public double calculateSalesTaxes(double salesAmount, double taxRate) {
+        return salesAmount * taxRate;
+    }
 }
