@@ -13,4 +13,7 @@ public class EmployeeView {
     double totalHours;
     Scanner scanner;
 
+    public EmployeeView(Employee model){
+        this.model = model;
+    }
 }
