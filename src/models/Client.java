@@ -53,4 +53,5 @@ public class Client implements Payment, Discount {
     public double calculateDiscount(double payment) {
         return payment * DISCOUNT_RATE / 100;
     }
+
 }
